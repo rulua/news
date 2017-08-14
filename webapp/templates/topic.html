@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic</title>
+    <link rel="stylesheet" href="../static/material.min.css">
+    <script defer src="../static/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+     .page-content{
+     width: 60%;
+     margin-left:auto;
+     margin-right:auto;
+     }
+    .page-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+    .mdl-list__item{
+    width:30%;
+    height:150px;
+    }
+   .page-content li{
+    float:left;
+    }
+    .demo-card-wide.mdl-card{
+     width: 60%;
+     margin-left:auto;
+     margin-right:auto;
+     }
+     .demo-card-wide > .mdl-card__title {
+     color: #fff;
+    height: 200px;
+    background: url('../static/news.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+<script language="JavaScript">
+    function gettopic(){
+       var arr=new Array()
+       var topics = document.getElementsByName("topic")
+       for(var i=0;i<topics.length;i++){
+           if(topics[i].checked){
+                arr[i]=0;
+           }
+           else{
+                arr[i]=1;
+           }
+       }
+       alert(arr);
+
+    }
+</script>
+
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Welcome</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            挑选你的喜好
+        </div>
+
+        <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+            </button>
+        </div>
+    </div>
+    <main class="mdl-layout__content">
+        <form method="post" action="/webapp/topic/">
+        <div class="page-content">
+            <ul class="demo-list-control mdl-list">
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">person</i>
+                           电影
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <input type="checkbox" name="topic"  class="mdl-checkbox__input" checked />
+                    </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons  mdl-list__item-avatar">star</i>
+                        电影
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" >
+                    <input type="checkbox"  name="topic" class="mdl-checkbox__input" checked />
+                </label>
+                </span>
+                </li>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">add</i>
+                           电影
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <input type="checkbox"  name="topic"  class="mdl-checkbox__input"  />
+                    </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">person</i>
+                            电影
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <input type="checkbox"  name="topic" class="mdl-checkbox__input"/>
+                    </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons  mdl-list__item-avatar">add</i>
+                        体育
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" >
+                    <input type="checkbox"  name="topic" class="mdl-checkbox__input"/>
+                </label>
+                </span>
+                </li>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">person</i>
+                           体育
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <input type="checkbox"  name="topic" class="mdl-checkbox__input"/>
+                    </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">add</i>
+                           体育
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <input type="checkbox"  name="topic" class="mdl-checkbox__input"/>
+                    </label>
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons  mdl-list__item-avatar">share</i>
+                        Bryan Cranston
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" >
+                    <input type="checkbox"  name="topic" class="mdl-checkbox__input"/>
+                </label>
+                </span>
+                </li>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">movie</i>
+                            Bryan Cranston
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                        <input type="checkbox"  name="topic" class="mdl-checkbox__input" />
+                    </label>
+                    </span>
+                </li>
+            </ul>
+            <div class="mdl-card__actions mdl-card--border">
+            <button onclick="gettopic()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                开始～
+            </button>
+        </div>
+        </div>
+    </main>
+    </form>
+</div>
+
+</body>
+</html>
